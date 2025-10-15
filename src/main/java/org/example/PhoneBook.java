@@ -1,9 +1,7 @@
 package org.example;
 
 
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class PhoneBook {
 
@@ -25,18 +23,21 @@ public class PhoneBook {
         }
         return null;
     }
+
     public String findByName(String name) {
 
         return contacts.get(name);
     }
 
-    public String printAllNames() {
+    public List<String> printAllNames() {
+        List<String> names = new ArrayList<>(contacts.keySet());
+        Collections.sort(names);
 
-        return Collections.emptyList().toString();
-   }
+        return names;
+    }
 
 
-        public static void main (String[]args){
-        }
+    public static void main(String[] args) {
+    }
 
 }

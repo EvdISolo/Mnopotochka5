@@ -1,7 +1,9 @@
 import org.example.PhoneBook;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Collections;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
@@ -38,7 +40,14 @@ public class PhoneBookTest {
         }
 @Test
     public void testPrintAllNames() {
-       PhoneBook pb = new PhoneBook();
-       assertEquals(Collections.emptyList().toString(), pb.printAllNames());
+    PhoneBook pb = new PhoneBook();
+        assertEquals(Collections.emptyList(), pb.printAllNames());
+
+       pb.add("Иван", "12345");
+       pb.add("Мария", "67590");
+       pb.add("Филипп", "99999");
+       pb.add("Андрей", "1234567890");
+      List<String> expectedNames= Arrays.asList("Андрей", "Иван", "Мария", "Филипп");
+assertEquals(expectedNames,pb.printAllNames());
 }
 }
