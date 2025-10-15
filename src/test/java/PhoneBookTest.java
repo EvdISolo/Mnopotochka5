@@ -23,8 +23,15 @@ public class PhoneBookTest {
 
         @Test
     public void testFindByName() {
-        String name=" Филипп";
-        String expectedNumber=null;
-        assertNull(expectedNumber);
+        PhoneBook pb = new PhoneBook();
+        pb.add("Ivan", "12345");
+        pb.add("Maria", "67590");
+        pb.add("Филипп", "99999");
+        pb.add("Андрей", "1234567890");
+
+        assertEquals("12345", pb.findByName("Ivan"));
+        assertEquals("67590", pb.findByName("Maria"));
+        assertEquals("99999", pb.findByName("Филипп"));
+        assertNull( pb.findByName("Андрей"));
         }
 }
