@@ -20,4 +20,11 @@ public class PhoneBookTest {
             String name = pb.findByNumber("99999");
             assertEquals("Филипп", name);
         }
+
+        @Test
+    public void testFindByName() {
+        String name=" Филипп";
+        String expectedNumber=null;
+        assertNull(expectedNumber);
+        }
 }
