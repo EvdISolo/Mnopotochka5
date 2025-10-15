@@ -1,6 +1,7 @@
 package org.example;
 
 
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,6 +30,10 @@ public class PhoneBook {
         return contacts.get(name);
     }
 
+    public String printAllNames() {
+
+        return Collections.emptyList().toString();
+   }
 
 
         public static void main (String[]args){
