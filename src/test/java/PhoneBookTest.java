@@ -12,10 +12,12 @@ public class PhoneBookTest {
         assertEquals(1,count);
     }
     @Test
-    public void testFindByNumber() {
-        PhoneBook pb = new PhoneBook();
-
-        String result = pb.findByNumber("123456");
-        assertNull(result);
-    }
+        public void testFindByNumber() {
+            PhoneBook pb = new PhoneBook();
+            pb.add("Ivan", "12345");
+            pb.add("Maria", "67590");
+            pb.add("Филипп", "99999");
+            String name = pb.findByNumber("99999");
+            assertEquals("Филипп", name);
+        }
 }
